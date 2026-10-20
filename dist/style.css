@@ -63,3 +63,8 @@
 [dir=rtl] .top-sales .section-head h2,[dir=rtl] .top-sales .product h3,[dir=rtl] .top-sales .new-label{font-family:'Noto Sans Arabic',sans-serif}
 @media(max-width:900px){.top-sales .products{gap:24px 15px}}
 @media(max-width:600px){.top-sales .section-head h2{font-size:27px;letter-spacing:-.5px}.top-sales .section-head .text-link{font-size:10px}.top-sales .products{gap:25px 13px}.top-sales-swatches{margin-top:12px;gap:8px}.top-sales-swatches span{width:16px;height:16px}}
+/* Brand-story banner typography only. */
+html:not([lang="ar"]) .editorial.full .banner-copy h2,
+html:not([lang="ar"]) .editorial.full .banner-copy h3{font-family:'Times New Roman',Times,serif;font-weight:400}
+html:not([lang="ar"]) .editorial.full .banner-copy p{font-family:Arial,sans-serif;font-weight:400}
+html:not([lang="ar"]) .editorial.full .banner-copy .btn{font-family:Arial,sans-serif;font-weight:600}
