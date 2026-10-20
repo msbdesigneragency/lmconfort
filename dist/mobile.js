@@ -6,12 +6,16 @@
 
   const tools=document.querySelector('.header .tools');
   if(tools&&!tools.querySelector('.mobile-language')){
-   const wrapper=document.createElement('div');wrapper.className='mobile-language';
-   const select=document.createElement('select');select.setAttribute('aria-label',({fr:'Langue',en:'Language',ar:'اللغة'})[document.documentElement.lang]||'Language');
-   for(const language of ['fr','en','ar']){const option=document.createElement('option');option.value=language;option.textContent=language.toUpperCase();option.lang=language;select.append(option)}
-   select.value=document.documentElement.lang;
-   select.addEventListener('change',()=>tools.querySelector('[data-lang="'+select.value+'"]')?.click());
-   wrapper.append(select);tools.insertBefore(wrapper,tools.firstChild);
+   const wrapper=document.createElement('details');wrapper.className='mobile-language';
+   const trigger=document.createElement('summary');trigger.textContent=document.documentElement.lang.toUpperCase();trigger.setAttribute('aria-label',({fr:'Langue',en:'Language',ar:'اللغة'})[document.documentElement.lang]||'Language');
+   const menu=document.createElement('div');menu.className='language-options';
+   for(const language of ['fr','en','ar']){
+    const option=document.createElement('button');option.type='button';option.textContent=language.toUpperCase();option.lang=language;option.setAttribute('aria-pressed',String(language===document.documentElement.lang));
+    option.addEventListener('click',()=>{wrapper.open=false;tools.querySelector('[data-lang="'+language+'"]')?.click();document.querySelector('.mobile-language summary')?.focus()});menu.append(option);
+   }
+   wrapper.addEventListener('keydown',event=>{if(event.key==='Escape'){wrapper.open=false;trigger.focus()}});
+   wrapper.addEventListener('focusout',event=>{if(!wrapper.contains(event.relatedTarget))wrapper.open=false});
+   wrapper.append(trigger,menu);tools.insertBefore(wrapper,tools.firstChild);
   }
   if(!mobile.matches){observer?.disconnect();return}
   const current=document.querySelector('.hero');
@@ -25,5 +29,6 @@
    document.querySelectorAll('main .section,main .promo,main .editorial.full,main .instagram').forEach(el=>{if(!el.dataset.mobileReveal){el.dataset.mobileReveal='true';observer.observe(el)}});
   }
  }
+ document.addEventListener('click',event=>{document.querySelectorAll('.mobile-language[open]').forEach(menu=>{if(!menu.contains(event.target))menu.open=false})});
  const app=document.getElementById('app');new MutationObserver(setup).observe(app,{childList:true});mobile.addEventListener('change',setup);setup();
 })();
