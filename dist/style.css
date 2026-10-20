@@ -44,3 +44,22 @@
  .promo .btn{font-size:1.05cqw;padding:1.1cqw 2.2cqw;gap:1.5cqw}
  [dir=rtl] .promo h2{font-size:3.7cqw}
 }
+
+/* Homepage Top ventes only: compact reference product cards. */
+.top-sales .section-head{margin-bottom:20px}
+.top-sales .section-head h2{font-family:'Times New Roman',Times,serif;font-size:clamp(28px,2.8vw,38px);font-weight:400;line-height:1.15;letter-spacing:-.7px}
+.top-sales .section-head .text-link{font-family:Arial,sans-serif;font-size:12px;font-weight:500}
+.top-sales .products{gap:20px}
+.top-sales .product-image{aspect-ratio:1/1.04;border-radius:5px;background:#f5e3df}
+.top-sales .product-image>a:first-of-type{display:block;width:100%;height:100%}
+.top-sales .product-image img{width:100%;height:100%;aspect-ratio:auto;object-fit:contain}
+.top-sales .heart{inset-block-start:9px;inset-inline-end:9px;padding:0}
+.top-sales .heart svg{width:17px;height:17px;stroke-width:1.6}
+.top-sales .product h3{font-family:Arial,sans-serif;font-size:12px;font-weight:600;line-height:1.3;margin:12px 0 6px}
+.top-sales .price{font-family:Arial,sans-serif;font-size:12px;font-weight:500;line-height:1.3}
+.top-sales-swatches{display:flex;align-items:center;gap:8px;margin-top:14px}
+.top-sales-swatches span{display:block;width:17px;height:17px;border-radius:50%;border:1px solid #e7d9d6;box-shadow:0 0 0 2px #fff9f7}
+.top-sales .new-label{position:absolute;z-index:2;inset-block-start:8px;inset-inline-start:8px;background:linear-gradient(110deg,#c54461,#622b3c);color:#fff;font-family:Arial,sans-serif;font-size:11px;font-weight:600;line-height:1;padding:5px 7px;border:1px solid #eab2bd;border-radius:4px}
+[dir=rtl] .top-sales .section-head h2,[dir=rtl] .top-sales .product h3,[dir=rtl] .top-sales .new-label{font-family:'Noto Sans Arabic',sans-serif}
+@media(max-width:900px){.top-sales .products{gap:24px 15px}}
+@media(max-width:600px){.top-sales .section-head h2{font-size:27px;letter-spacing:-.5px}.top-sales .section-head .text-link{font-size:10px}.top-sales .products{gap:25px 13px}.top-sales-swatches{margin-top:12px;gap:8px}.top-sales-swatches span{width:16px;height:16px}}
