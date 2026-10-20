@@ -8,6 +8,7 @@
  .hero-reference>.wrap{position:relative;height:100%}
  .hero-reference .hero-content{position:absolute;top:50%;transform:translateY(-50%);padding-block:0;width:46%;max-width:660px}
  .hero-reference h1{font-size:clamp(40px,4.6vw,76px)}
+ .hero-reference .slider{bottom:18px}
 }
 @media(min-width:601px) and (max-width:900px){
  .hero-reference{height:40vw;min-height:360px}
