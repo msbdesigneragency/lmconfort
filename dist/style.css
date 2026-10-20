@@ -88,3 +88,21 @@ html:not([lang="ar"]) .editorial.full .banner-copy .btn{font-family:Arial,sans-s
 [dir=rtl] .top-brands .banner-copy{margin-right:auto;margin-left:0}
 [dir=rtl] .top-brands .section-head h2,[dir=rtl] .top-brands .banner-copy h3,[dir=rtl] .top-brands .banner-copy p,[dir=rtl] .top-brands .btn{font-family:'Noto Sans Arabic',sans-serif}
 @media(max-width:600px){.top-brands .section-head h2{font-size:28px;gap:10px}.top-brands .text-link{font-size:10px;gap:6px}.top-brands .brand-reference{aspect-ratio:auto;min-height:450px;background:#f4d6da}.top-brands .brand-reference>img{height:220px;object-fit:cover;object-position:right center}.top-brands .banner-copy{position:relative;left:auto;top:auto;bottom:auto;width:100%;padding:242px 24px 26px}.top-brands .brand-wordmark{margin-bottom:12px}.top-brands .brand-wordmark span{font-size:50px;letter-spacing:-2px}.top-brands .brand-wordmark small{font-size:9px;letter-spacing:6px;padding-left:6px;margin-top:3px}.top-brands .banner-copy h3{font-size:20px}.top-brands .banner-copy p{font-size:13px;line-height:1.5;margin:8px 0 18px}.top-brands .btn{font-size:12px;padding:13px 22px;gap:10px}}
+/* Preserve the supplied Top marques photograph and give its copy room. */
+.top-brands .brand-wordmark img{width:16cqw;height:auto;max-width:100%;object-fit:contain}
+.top-brands .brand-wordmark{margin-bottom:1.5cqw}
+.top-brands .banner-copy h3{margin-bottom:.8cqw}
+.top-brands .banner-copy p{margin:0 0 1.7cqw;line-height:1.55}
+@media(min-width:601px){
+ .top-brands .brand-reference{aspect-ratio:2170/725}
+ .top-brands .brand-reference>img{object-fit:contain}
+ .top-brands .banner-copy{left:4.8%;top:50%;bottom:auto;transform:translateY(-50%);width:30%}
+}
+@media(max-width:600px){
+ .top-brands .brand-reference>img{height:auto;aspect-ratio:2170/725;object-fit:contain;object-position:center top}
+ .top-brands .banner-copy{padding-top:calc(100% * 725 / 2170 + 24px)}
+ .top-brands .brand-wordmark img{width:150px}
+ .top-brands .brand-wordmark{margin-bottom:18px}
+ .top-brands .banner-copy h3{margin-bottom:10px}
+ .top-brands .banner-copy p{margin-bottom:20px}
+}
