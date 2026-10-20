@@ -99,3 +99,10 @@
  .top-sales-swatches{gap:7px}
  .top-sales-swatches span{width:21px;height:21px}
 }
+@media(max-width:768px){
+ .product-quantity{display:inline-flex;align-items:stretch;vertical-align:middle;margin-inline-start:12px;border:1px solid var(--line)}
+ .product-quantity .product-quantity-step{display:grid;place-items:center;width:40px;min-height:44px;padding:0;color:var(--berry);font-size:22px;touch-action:manipulation}
+ .product-quantity #product-qty{width:46px!important;margin-inline-start:0!important;min-height:44px;padding:8px 2px;text-align:center;border:0;appearance:textfield;-moz-appearance:textfield}
+ .product-quantity #product-qty::-webkit-inner-spin-button,.product-quantity #product-qty::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
+ .product-quantity-step:active{background:var(--pink)}
+}

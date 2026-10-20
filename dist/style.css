@@ -140,3 +140,5 @@ html:not([lang="ar"]) .editorial.full .banner-copy .btn{font-family:Arial,sans-s
 .header .mobile-language summary:focus-visible{outline:1px solid #b72e55;outline-offset:1px}
 
 [data-wish].saved{color:var(--berry)}[data-wish].saved svg{fill:var(--berry);stroke:var(--berry)}
+
+.product-quantity-step{display:none}
