@@ -17,3 +17,21 @@
  .hero-reference h1{font-size:clamp(32px,4.6vw,44px)}
 }
 @media(max-width:600px){.hero-reference .hero-photo{object-fit:contain;object-position:center top}}
+
+/* Sale banner only: reference composition and typography. */
+.promo{aspect-ratio:4.35;min-height:0;border-radius:5px;display:block;color:#84243e}
+.promo>img{height:100%;object-fit:cover;object-position:center}
+.promo:before,[dir=rtl] .promo:before{display:none;background:none}
+.promo .banner-copy{width:43%;max-width:none;padding:clamp(24px,2.5vw,42px) clamp(24px,3.6vw,60px)}
+.promo .eyebrow{font-family:Arial,sans-serif;font-size:clamp(10px,1vw,14px);letter-spacing:.5px;line-height:1.4;margin-bottom:8px;color:#8e3b50}
+.promo h2{font-family:'Times New Roman',Times,serif;font-weight:400;font-size:clamp(42px,4.6vw,76px);line-height:1.04;letter-spacing:-1.5px;color:#84243e}
+.promo .banner-copy p{font-family:Arial,sans-serif;font-size:clamp(13px,1.35vw,19px);line-height:1.45;max-width:410px;margin:10px 0 19px;color:#842f46}
+.promo .btn{font-family:Arial,sans-serif;font-weight:600;font-size:clamp(11px,1vw,14px);padding:13px 23px;gap:17px;border-radius:3px;background:#fff9f7;color:#7f203a}
+.sale-badge{position:absolute;z-index:2;left:49%;top:7%;width:9.3%;aspect-ratio:1;border:2px solid #fff8f7;border-radius:50%;background:#fff5f1e8;display:flex;align-items:center;justify-content:center;flex-direction:column;color:#84243e;text-align:center}
+.sale-badge span{font:600 clamp(8px,.8vw,12px) Arial,sans-serif;text-transform:uppercase}
+.sale-badge bdi{font:600 clamp(24px,2.8vw,43px)/1.05 'Times New Roman',Times,serif;direction:ltr}
+[dir=rtl] .promo .banner-copy{margin-right:auto;margin-left:0}
+[dir=rtl] .promo h2{font-family:'Noto Sans Arabic',sans-serif;font-size:clamp(30px,3.5vw,55px);letter-spacing:0}
+[dir=rtl] .promo .eyebrow,[dir=rtl] .promo .banner-copy p,[dir=rtl] .promo .btn,[dir=rtl] .sale-badge span{font-family:'Noto Sans Arabic',sans-serif}
+@media(max-width:900px) and (min-width:601px){.promo .banner-copy{width:46%;padding:20px 25px}.promo h2{font-size:40px}.promo .banner-copy p{font-size:12px;margin:7px 0 12px}.promo .btn{padding:10px 16px}.promo .eyebrow{font-size:9px;margin-bottom:5px}}
+@media(max-width:600px){.promo{aspect-ratio:auto;min-height:440px;background:#f3d2d5}.promo>img{height:220px;object-fit:cover;object-position:right center}.promo .banner-copy{padding:240px 24px 26px;width:100%}.promo h2{font-size:43px}.promo .banner-copy p{font-size:14px;max-width:320px;margin:10px 0 18px}.promo .eyebrow{font-size:10px}.promo .btn{font-size:12px}.sale-badge{width:76px;left:20px;top:18px}.sale-badge span{font-size:9px}.sale-badge bdi{font-size:30px}}
