@@ -3,7 +3,16 @@
  const mobile=matchMedia('(max-width:768px)'),reduce=matchMedia('(prefers-reduced-motion:reduce)');
  let hero=null,start=null,observer=null;
  function setup(){
-  if(!mobile.matches){observer?.disconnect();return}
+  if(!mobile.matches){observer?.disconnect();document.querySelector('.mobile-language')?.remove();return}
+  const tools=document.querySelector('.header .tools');
+  if(tools&&!tools.querySelector('.mobile-language')){
+   const wrapper=document.createElement('div');wrapper.className='mobile-language';
+   const select=document.createElement('select');select.setAttribute('aria-label',({fr:'Langue',en:'Language',ar:'اللغة'})[document.documentElement.lang]||'Language');
+   for(const language of ['fr','en','ar']){const option=document.createElement('option');option.value=language;option.textContent=language.toUpperCase();option.lang=language;select.append(option)}
+   select.value=document.documentElement.lang;
+   select.addEventListener('change',()=>tools.querySelector('[data-lang="'+select.value+'"]')?.click());
+   wrapper.append(select);tools.insertBefore(wrapper,tools.firstChild);
+  }
   const current=document.querySelector('.hero');
   if(current&&current!==hero){
    hero=current;
