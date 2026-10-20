@@ -113,3 +113,7 @@ html:not([lang="ar"]) .editorial.full .banner-copy .btn{font-family:Arial,sans-s
  .hero-reference .hero-photo{object-position:center top}
  [dir=rtl] .hero-reference .hero-content h1{font-size:clamp(36px,3.7vw,46px)}
 }
+/* Navigation logo only. */
+.header .logo{width:124px;display:flex;align-items:center}
+.header .logo img{width:100%;height:auto;max-height:54px;object-fit:contain}
+@media(max-width:600px){.header .logo{width:88px}.header .logo img{max-height:38px}}
