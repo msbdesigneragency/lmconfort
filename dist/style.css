@@ -117,3 +117,12 @@ html:not([lang="ar"]) .editorial.full .banner-copy .btn{font-family:Arial,sans-s
 .header .logo{width:124px;display:flex;align-items:center}
 .header .logo img{width:100%;height:auto;max-height:54px;object-fit:contain}
 @media(max-width:600px){.header .logo{width:88px}.header .logo img{max-height:38px}}
+
+/* Match the existing compact mobile language control on desktop. */
+@media(min-width:769px){
+ .header .tools>.lang{display:none}
+ .header .mobile-language{position:relative;flex:0 0 46px;direction:ltr;margin-inline-end:2px}
+ .header .mobile-language:after{content:'';position:absolute;right:7px;top:19px;width:5px;height:5px;border-inline-end:1px solid currentColor;border-bottom:1px solid currentColor;transform:rotate(45deg);color:#a46578;pointer-events:none}
+ .header .mobile-language select{width:46px;min-height:44px;appearance:none;-webkit-appearance:none;border:0;border-radius:3px;background:transparent;padding:9px 17px 9px 4px;color:#9f2a4a;font:500 11px/1.3 'DM Sans',sans-serif;cursor:pointer;direction:ltr}
+ .header .mobile-language select:focus-visible{outline:1px solid #b72e55;outline-offset:1px}
+}

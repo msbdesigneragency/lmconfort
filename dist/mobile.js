@@ -1,9 +1,9 @@
-/* Progressive mobile gestures and reveals; desktop rendering is untouched. */
+/* Shared compact language selector, plus mobile-only gestures and reveals. */
 (()=>{
  const mobile=matchMedia('(max-width:768px)'),reduce=matchMedia('(prefers-reduced-motion:reduce)');
  let hero=null,start=null,observer=null;
  function setup(){
-  if(!mobile.matches){observer?.disconnect();document.querySelector('.mobile-language')?.remove();return}
+
   const tools=document.querySelector('.header .tools');
   if(tools&&!tools.querySelector('.mobile-language')){
    const wrapper=document.createElement('div');wrapper.className='mobile-language';
@@ -13,6 +13,7 @@
    select.addEventListener('change',()=>tools.querySelector('[data-lang="'+select.value+'"]')?.click());
    wrapper.append(select);tools.insertBefore(wrapper,tools.firstChild);
   }
+  if(!mobile.matches){observer?.disconnect();return}
   const current=document.querySelector('.hero');
   if(current&&current!==hero){
    hero=current;
