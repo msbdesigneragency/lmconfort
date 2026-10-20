@@ -106,3 +106,10 @@ html:not([lang="ar"]) .editorial.full .banner-copy .btn{font-family:Arial,sans-s
  .top-brands .banner-copy h3{margin-bottom:10px}
  .top-brands .banner-copy p{margin-bottom:20px}
 }
+/* Keep the desktop hero compact on wide displays. */
+@media(min-width:901px){
+ .hero-reference{height:clamp(360px,min(40vw,calc(100svh - 180px)),500px);min-height:0}
+ .hero-reference h1{font-size:clamp(40px,4.6vw,60px)}
+ .hero-reference .hero-photo{object-position:center top}
+ [dir=rtl] .hero-reference .hero-content h1{font-size:clamp(36px,3.7vw,46px)}
+}
